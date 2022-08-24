@@ -1,8 +1,10 @@
 import { Component } from "react";
 
+import { LINES } from "../../nonview/core/Line";
 import { STATIONS } from "../../nonview/core/Station";
 
 import GeoMap from "../../view/molecules/GeoMap";
+import LineView from "../../view/molecules/LineView";
 import StationView from "../../view/molecules/StationView";
 
 export default class MapPage extends Component {
@@ -13,7 +15,19 @@ export default class MapPage extends Component {
     });
   }
 
+  renderLines() {
+    return LINES.map(function (line) {
+      const key = "line-" + line.lineName;
+      return <LineView key={key} line={line} />;
+    });
+  }
+
   render() {
-    return <GeoMap>{this.renderStations()}</GeoMap>;
+    return (
+      <GeoMap>
+        {this.renderLines()}
+        {this.renderStations()}
+      </GeoMap>
+    );
   }
 }
