@@ -1,3 +1,4 @@
+import IDX from "../../nonview/base/IDX";
 import LINES_D from "../../nonview/constants/LINES_D";
 
 export default class Line {
