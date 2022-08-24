@@ -1,3 +1,5 @@
+import GeoMap from "./view/molecules/GeoMap";
+
 export default function App() {
-  return "TODO";
+  return <GeoMap />;
 }
