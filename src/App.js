@@ -1,5 +1,5 @@
-import GeoMap from "./view/molecules/GeoMap";
+import MapPage from "./view/pages/MapPage";
 
 export default function App() {
-  return <GeoMap />;
+  return <MapPage />;
 }
