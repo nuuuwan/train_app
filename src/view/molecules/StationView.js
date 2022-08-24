@@ -1,8 +1,12 @@
 import { CircleMarker } from "react-leaflet";
 
-const DEFAULT_CIRLE_RADIUS = 10;
+const DEFAULT_CIRLE_RADIUS = 5;
 
-const STYLE_STATION_CIRCLE = { color: "red", stroke: null, fillOpacity: 0.5 };
+const STYLE_STATION_CIRCLE = {
+  color: "red",
+  fillColor: "white",
+  fillOpacity: 1,
+};
 
 export default function StationView({ station }) {
   return (
